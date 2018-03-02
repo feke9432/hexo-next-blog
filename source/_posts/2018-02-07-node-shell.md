@@ -13,7 +13,7 @@ tags:
 * hexo d
 
 这显然是重复到不行的重复操作，作为一个有极客精神的伪极客爱好者，自然是无法忍受的，所以今天就来研究使用node开发shell（命令行）程序。
-
+<!-- more -->
 ## search
 
 学习，自然要先查资料，打开google，看到我们熟悉的阮一峰老师的名字，于是决定今天第一个就是它了：[Node.js命令行程序开发教程](http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html)
