@@ -142,8 +142,7 @@ runAll();
 在 Git Bash 中执行：
 
 ```
-$ chmod 755 hello
-$ node cgd
+$ chmod 755 cgd
 ```
 
 接着在 package.json 最后加入bin：
@@ -155,6 +154,6 @@ $ node cgd
   }
 }
 ```
-执行 npm link,杀毒软件提示，我们不理他，然后，直接：
+执行 npm link,杀毒软件提示，我们不理他，成功后，直接：
 
 ![](./2018-02-07-node-shell/02.jpg)
