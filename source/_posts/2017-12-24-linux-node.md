@@ -36,22 +36,45 @@ ln: failed to create symbolic link '/tmp/mysql.sock': File exists
 
 各种百度后，发现原来可以直接操作linux服务器下载安装包，下载后直接解压（解压还解压失败一次，各位如果还是遇到上面的问体，不妨删除文件，重新解压试试），速度提高一大截，但问题依旧没有解决，还是各种报错。。。
 
-再回头看看那个帖子，谷歌翻译了一下报错信息：文件已存在，于是想到是不是之前建立软连接干扰了这次安装？
+### 直接在linux上下载
 
-于是：`rm /usr/local/bin/node` ; `rm /usr/local/bin/npm` 删除旧的软连接
+首先找到下载链接：
 
-重新建立软连接成功安装：
+![](/2017-12-24-linux-node/5.png)
+
+```
+wget https://nodejs.org/dist/v8.10.0/node-v8.10.0-linux-x64.tar.xz
+```
+
+下载到当前目录，
+
+```
+xz -d node-v8.10.0-linux-x64.tar.xz
+
+tar -xv -f node-v8.10.0-linux-x64.tar
+```
+
+两次解压，然后进入 node 根目录。
+
+```
+ln -s /node/node-v8.10.0-linux-x64/bin/npm /usr/local/bin/
+
+ln -s /node/node-v8.10.0-linux-x64/bin/node /usr/local/bin/
+```
+建立软连接成功安装：
 
 ![](/2017-12-24-linux-node/1.png)
 
 ### 继续安装 express
 
 ```
-$ npm install express -gd // 全局安装express 
+$ npm install express -g // 全局安装express 
 $ npm install express-generator -g // 全局安装experss生成器
 $ ln -s /node/node-v8.9.3-linux-x64/bin/express /usr/local/bin/express // 建立全局软连接
 $ express --version // 查看是否安装成功
 ```
+
+记得在安装 epxress 后继续安装 express-generator ，只安装 express 可能会找不到。
 
 ![](/2017-12-24-linux-node/2.png)
 
@@ -120,7 +143,7 @@ ln -s 你的node目录+/lib/node_modules/forever/bin/forever /usr/local/bin
 forever start ./bin/www // express模板跑服务器
 ```
 
-然后关掉PuTTY也可以访问我们的服务了
+然后关掉PuTTY也可以访问我们的服务了，但我们这里使用的是宝塔面板，他默认没有开放 3000 端口，要到宝塔里开启端口。
 
 #### 常用 forever 命令：
 > * forever start test.js|[pid] // 后台开启服务。
