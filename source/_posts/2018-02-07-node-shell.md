@@ -190,4 +190,6 @@ runAll(['git add .', `git commit -m"[${timenow}] updata"`, 'git push origin mast
 
 加上 hexo 的命令 3 个，现在一共六个命令会依次执行。
 
+![](./2018-02-07-node-shell/1.png)
+
 再次登录 github 账户检查成果，看到我们的时间更新，ok，使用1分钟解决同类任务！
