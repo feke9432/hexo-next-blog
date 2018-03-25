@@ -12,7 +12,7 @@ tags:
 * hexo g
 * hexo d
 
-这显然是重复到不行的重复操作，作为一个有极客精神的伪极客爱好者，自然是无法忍受的，所以今天就来研究使用node开发shell（命令行）程序。
+这显然是重复到不行的重复操作，作为一个有极客精神的伪极客，自然是无法忍受的，所以今天就来研究使用node开发shell（命令行）程序。
 <!-- more -->
 ## search
 
@@ -99,6 +99,8 @@ var child = exec('echo hello ' + name, function(err, stdout, stderr) {
 });
 ```
 
+#### 完成一件部署博客 shell 脚本。
+
 到这里其实我们已经掌握了关键，就是 child_process 的 exec 函数来执行系统命令，从第二个函数也能看出来是一个异步函数，可以写出如下代码：
 
 ```
@@ -157,3 +159,33 @@ $ chmod 755 cgd
 执行 npm link,杀毒软件提示，我们不理他，成功后，直接：
 
 ![](./2018-02-07-node-shell/02.jpg)
+
+显然还不够好，函数的可复用性也是一个极客的必备素质，改造 runAll 函数：
+
+```
+...
+// 用参数和遍历来解决任意个命令执行问题。
+let runAll = async function (arr) {
+    for(let str of arr) {
+        await runShell(str);
+    }
+}
+
+// 执行时只要
+runAll(['hexo clean', 'hexo g', 'hexo d']);
+
+```
+
+#### 添加 hexo 博客源码 shell 命令集
+
+完成上面的函数后其实，下面的工作就非常简单了，
+
+```
+// 添加更新时间
+let timenow = new Date().toLocaleString();
+
+// 填入 git 的命令集
+runAll(['git add .', `git commit -m"[${timenow}] updata"`, 'git push origin master']);
+```
+
+再次登录 github 账户检查成果，看到我们的时间更新，ok，使用1分钟解决同类任务！
