@@ -20,6 +20,7 @@
     "lie": "^3.3.0"
   },
   "bin": {
-    "cgd": "cgd"
+    "cgd": "cgd",
+    "gud": "gitupdata"
   }
 }
