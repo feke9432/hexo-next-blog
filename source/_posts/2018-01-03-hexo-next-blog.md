@@ -8,8 +8,6 @@ tags:
 
 ## 创建博客
 
-目标是用：[hexo](https://hexo.io/zh-cn/index.html) 和 [Next](https://theme-next.iissnan.com/) 搭建博客。
-
 ### 准备工作
 
 * 安装：[node.js](https://nodejs.org/zh-cn/) 
@@ -135,22 +133,6 @@ tags: js
 
 按文档说要修改 next 主题配置 `language: zh-Hans` ，然后 `hexo clean` 一下; 如果不行的话，就把 `./themes/next/languages/` 文件夹下的 `de.yml` 和 `default.yml` 用中文配置覆盖就行。
 
-#### 配置关于我页
-
-新建一个 about 页面：
-
-```
-hexo new page "about"
-```
-
-然后修改 Next 主题配置文件，去掉 about 的注释就好。
-
-具体关于我页面的内容，你可以使用 markdown 语法在新生成的页面里修改。
-
-#### 使用 hexo d 部署后 github page 不同步
-
-这时候你可以删除根目录的 `.deploy_git` 文件夹，再次同步就好。
-
 ### 部署博客到 github 上
 
 因为并没有购买服务器域名，暂时利用 Github 提供的 pages 服务部署博客。
@@ -180,5 +162,5 @@ hexo new page "about"
 
 如果 hexo d 失败，可能是你之前已经建立过这个仓库了，删除旧库重新建立就好。
 
-但这样执行三个不知道多久的命令太笨了，如果想一个命令解决问题，可以参考我的另一篇博文：[node.js 开发 shell （命令行）程序](https://feke9432.github.io/2018/02/07/2018-02-07-node-shell/)。
+但这样执行三个不知道多久的命令太笨了，如果想一个命令解决问题，可以参考我的另一篇博文：node.js 开发 shell （命令行）程序
 
