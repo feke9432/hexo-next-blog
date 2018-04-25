@@ -39,3 +39,25 @@ Port 23456
 service sshd restart
 ```
 
+测试 新端口可用，那就再次进配置文件删除 22 端口，重启 ssh 后就生效了。
+ 
+## 检查 防火墙（iptables） 是否开启
+
+```
+$ service iptables status
+
+iptables: Firewall is not running. // 未开启
+```
+
+记录一些常用命令：
+
+```
+查询防火墙状态    :    [root@localhost ~]# service   iptables status
+停止防火墙   :    [root@localhost ~]# service   iptables stop
+启动防火墙   :    [root@localhost ~]# service   iptables start
+重启防火墙   :    [root@localhost ~]# service   iptables restart
+永久关闭防火墙    :    [root@localhost ~]# chkconfig   iptables off
+永久关闭后启用    :    [root@localhost ~]# chkconfig   iptables on
+```
+
+**注意：**：一定要先把ssh端口开了再推出putty。。。血的教训。
