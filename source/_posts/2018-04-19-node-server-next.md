@@ -123,6 +123,8 @@ $ pm2 start my-python-script.py -x --interpreter python
 
 ## 配置 ftp 
 
+### 安装 ftp
+
 > 主要参考[Linux平台下快速搭建FTP服务器](https://blog.csdn.net/wantaway314/article/details/52584531)
 
 使用 yum 安装 vsftp ：
@@ -135,9 +137,68 @@ yum install vsftpd -y
 
 ```
 启动ftp命令
-#service vsftpd start
+$ service vsftpd start
 停止ftp命令
-#service vsftpd stop
+$ service vsftpd stop
 重启ftp命
-#service vsftpd restart
+$ service vsftpd restart
+检查Vsftpd服务状态
+$ service vsftpd status
 ```
+
+### 修改ftp配置
+
+修改vi /etc/vsftpd/vsftpd.conf 文件 将下面的注释去掉 ：
+
+```
+允许上传文件
+Anon_upload_enable=yes 
+允许创建文件夹
+Anon_mkdir_write_enable=yes 
+允许写入
+Write_enable=yes
+```
+
+### 添加ftp用户
+
+登录Linux主机后，运行命令：”useradd ftpadmin -s /sbin/nologin “。
+
+该账户路径默认指向/home/ftpadmin目录；
+
+如果需要将用户指向其他目录，请运行命令：useradd ftpadmin -s /sbin/nologin –d /opt/test(其他目录)
+
+测试使用 FileZlilla 链接报错：
+
+```
+响应:	500 OOPS: cannot change directory:/home/ftpadmin
+```
+
+这是因为服务器开启了selinux，这限制了FTP的登录
+
+按提示输入 
+
+```
+setsebool -P ftpd_disable_trans 1 
+service vsftpd restart 
+```
+
+如果出现提示 `Could not change boolean ftpd_disable_trans`
+
+可以尝试输入：
+
+```
+setsebool allow_ftpd_full_access  1
+setsebool allow_ftpd_use_cifs 1
+setsebool allow_ftpd_use_nfs 1
+setsebool ftp_home_dir  1
+setsebool httpd_enable_ftp_server 1
+setsebool tftp_anon_write 1 
+```
+
+输入一般没有提示，直接在 ftp 软件中测试链接就好。
+
+如果 ftp 提示 `响应:	553 Could not create file.`
+
+修改文件夹权限就好 `chmod -R 777 path`.
+
+## 安装 mysql
