@@ -201,4 +201,20 @@ setsebool tftp_anon_write 1
 
 修改文件夹权限就好 `chmod -R 777 path`.
 
+### 在防火墙中添加ftp的端口
+
+添加进出端口，保存后重启防火墙，最后检查防火墙状态：
+
+```
+$ /sbin/iptables -I INPUT -p tcp --dport 21 -j ACCEPT 
+$ /sbin/iptables -I OUTPUT -p tcp --dport 21 -j ACCEPT
+$ /etc/rc.d/init.d/iptables save
+$ service iptables restart
+$ service iptables status
+```
+
+看到21端口顺利开放以后，本地 ftp 软件登陆检查是否顺利访问，成功！
+
+注释：千万不要用外部ftp软件删除文件超多的文件夹，在 ssh 里删除可是快的多。。。
+
 ## 安装 mysql
