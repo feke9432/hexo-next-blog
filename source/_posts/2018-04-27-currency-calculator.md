@@ -96,7 +96,7 @@ router.get('/currency', (req, res, next) => {
 
 ```
 
-一时想不起来node.js 的url处理函数。。。这里需求比较简单，找一定比自己写慢，索性就简单实现一下：
+一时想不起来node.js 的url处理函数。。。这里需求比较简单，找一定比自己写慢，索性就简单实现一下，后期找到更好的，直接换名就好。
 
 ```
 function parseUrl (objs) {
