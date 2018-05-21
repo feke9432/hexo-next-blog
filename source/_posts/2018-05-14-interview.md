@@ -20,3 +20,5 @@ tags: interview
 
 2. [详解JavaScript中的Event Loop（事件循环）机制](https://zhuanlan.zhihu.com/p/33058983)
     作者对 js 事件机制总结的很全，但图形几乎都是官方图形，比较难懂
+
+
