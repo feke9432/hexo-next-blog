@@ -31,7 +31,7 @@ yum install -y wegt
 
 安装成功后，使用 wegt 下载 node.js 安装包，安装包按网上的教程都比较老，我们这里直接到[官网](https://nodejs.org/en/download/)找：
 
-![](./2018-04-19-node-server-next/1.png)
+![](./1.png)
 
 下载完成后依次解压(如果提示未安装，直接使用 yum install 安装它)
 

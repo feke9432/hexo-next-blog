@@ -42,7 +42,7 @@ ln: failed to create symbolic link '/tmp/mysql.sock': File exists
 
 重新建立软连接成功安装：
 
-![](/2017-12-24-linux-node/1.png)
+![](./1.png)
 
 ### 继续安装 express
 
@@ -53,7 +53,7 @@ $ ln -s /node/node-v8.9.3-linux-x64/bin/express /usr/local/bin/express // 建立
 $ express --version // 查看是否安装成功
 ```
 
-![](/2017-12-24-linux-node/2.png)
+![](./2.png)
 
 ### 开个服务器做测试
 
@@ -138,11 +138,11 @@ npm install mysql
 
 想要操作数据库先要有库可用，所以我们先用之前安装好的phpMyAdmin新建数据库，做测试所以名字用了test。
 
-![](/2017-12-24-linux-node/3.png)
+![](./3.png)
 
 并且建立一张用户表，三个参数，id，user_name，user_password，并输入一条初始数据
 
-![](/2017-12-24-linux-node/4.png)
+![](./4.png)
 
 然后尝试在我们的node程序中调用数据库:
 

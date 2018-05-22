@@ -22,7 +22,7 @@ tags: css
 
 通过一些数值调整，其实可以做好多有意思的效果，但真正想要美观，那就需要设计师的美感了。。。
 
-![](./2018-05-03-css-gradient/01.jpg)
+![](./01.jpg)
 
 ```
 background: linear-gradient(147.967deg, rgb(153, 0, 0) 19.3%, rgb(51, 51, 51) 38.6%, rgb(238, 238, 238) 10%, rgb(51, 51, 51) 45%);
@@ -31,7 +31,7 @@ background: linear-gradient(180deg, #990000 60%, #333 71%, #eee 82%, #333 95%);
 
 另一方面，想要多设置角度时，可以这样写:
 
-![](./2018-05-03-css-gradient/02.jpg)
+![](./02.jpg)
 
 ```
 background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 60.71%),
