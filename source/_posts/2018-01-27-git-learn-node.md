@@ -14,11 +14,37 @@ tags: git
 
 如果你是第一次学习git，那我建议你创建一个github项目仓库边学边练。
 
-* 新建仓库
+* git 全局配置
 
-    ```
-    git init
-    ```
+```
+git config -global user.name "feke9432"
+git config -global user.email "feke9432@gmail.com"
+```
+
+* 创建文件夹
+```
+mkdir test
+```
+
+* 切换到 test
+```
+cd test
+```
+
+* 新建readme.md
+```
+touch readme.md
+```
+
+* 新建仓库
+```
+git init
+```
+
+* 查看仓库信息
+```
+git status
+```
 
 * 检出仓库（下载别人的仓库里的代码）
 ```
@@ -35,12 +61,22 @@ git remote add orgin 远程地址
 git add <filename>
 ```
 
+* 将文件移除缓存区
+```
+git rm --cached filename
+```
+
+* 删除 文件
+```
+rm test.txt
+```
+
 * 我一般直接添加全部改动
 ```
 git add . || git add *
 ```
 
-* 提交到head 区，并提交改动注释
+* 提交到head 区(本地仓库)，并提交改动注释
 ```
 git commit -m"改动注释信息"
 ```
