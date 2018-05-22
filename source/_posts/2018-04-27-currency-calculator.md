@@ -17,8 +17,8 @@ tags: project
 
 因为直接使用了 vux 提供的模板，所以直接新建 CalPage.vue 在 main.js 中引入就可以开搞了:
 
-![](./2018-04-27-currency-calculator/02.jpg)
-![](./2018-04-27-currency-calculator/01.jpg)
+![](./02.jpg)
+![](./01.jpg)
 
 货币选择采用了 vux 的 popupRadio 组件（如无特别说明，后面所有都是 vux 的组件），纯粹觉得好看。。。
 
