@@ -5,6 +5,7 @@ date: 2018-03-23 14:50:16
 
 # 学习经历 => 统招本科 
 
+>    
 > I have to change myself since I cannot change others.
 
 我来自内蒙古科技大学，统招本科学历。
@@ -18,6 +19,7 @@ date: 2018-03-23 14:50:16
 
 # 职业技能
 
+>    
 > Stay Hungry Stay Foolish.
 
 1. 精通 HTML、CSS、JavaScript 前端基础知识，熟悉W3C标准。
