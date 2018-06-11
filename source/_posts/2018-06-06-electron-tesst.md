@@ -32,4 +32,4 @@ electron-packager . app --win --out presenterTool --arch=x64 --electron-version 
 
 这时候想到可能还是依赖的问题，别人的电脑与我的电脑最大的区别就是没有 node.js 环境，然后点开 node.js 的依赖文件夹 node_modules；
 
-一对比果然：electron 生成的文件夹和 node.js 中差了很多依赖，于是把外面 node.js 生成的依赖放进去，然后再次到别人电脑测试，就跑通了。
+一对比果然：electron 生成的依赖文件夹和 node.js 中生成的差了很多依赖文件夹，于是把外面 node.js 生成的依赖放进去，然后再次到别人电脑测试，就跑通了。
