@@ -5,6 +5,7 @@ tags:
     - node
     - js
     - shell
+categories: 服务端--node
 ---
 
 **题记**：每次更新hexo博客都要执行三个命令:

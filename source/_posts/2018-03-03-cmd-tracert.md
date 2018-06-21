@@ -2,6 +2,7 @@
 title: 检查 ip 或域名被墙的几种方法
 date: 2018-03-03 14:12:41
 tags: cmd
+categories: 常用软件
 ---
 
 所谓被墙了，又称 GFW （Great Friewall of China) 中国防火墙长城，指的是被中华人民共和国政府在其管辖因特网内部建立的多套网络审查系统拉黑了，禁止访问了。

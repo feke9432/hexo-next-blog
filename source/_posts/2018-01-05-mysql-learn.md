@@ -2,6 +2,7 @@
 title: mysql 基础语法学习
 date: 2018-01-05 19:29:03
 tags: mysql
+categories: 服务端--mysql
 ---
 
 ## mysql 数据库 sql语句学习

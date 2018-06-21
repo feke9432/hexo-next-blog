@@ -3,6 +3,7 @@ title: 日语学习笔记
 date: 2018-02-22 20:50:32
 tags:
     - japnese
+categories: 日记文章
 ---
 
 > 为了秋叶原！

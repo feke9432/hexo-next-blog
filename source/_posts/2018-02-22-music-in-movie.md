@@ -4,6 +4,7 @@ date: 2018-02-22 20:48:37
 tags:
     - music
     - movie
+categories: 日记文章
 ---
 
 这篇博文，专门收集那些感动过我的音乐。

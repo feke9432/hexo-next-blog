@@ -1,7 +1,8 @@
 ---
 title: 抛开宝塔配置node.js服务器
 date: 2018-04-19 14:41:05
-tags: node
+tags: liunx
+categories: 服务端--liunx
 ---
 
 和公司申请了一台测试用服务器，打算做点什么出来。

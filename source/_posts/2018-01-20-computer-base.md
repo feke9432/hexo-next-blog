@@ -2,6 +2,7 @@
 title: 计算机基础
 date: 2018-01-02 19:12:20
 tags: base
+categories: 日记文章
 ---
 ## 记录一些基础知识：
 

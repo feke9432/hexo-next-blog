@@ -2,6 +2,7 @@
 title: promise 学习使用
 date: 2018-01-10 19:22:50
 tags: js
+categories: 前端--js
 ---
 
 ## js Promise

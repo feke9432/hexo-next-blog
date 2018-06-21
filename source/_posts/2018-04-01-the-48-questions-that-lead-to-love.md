@@ -2,6 +2,7 @@
 title: 让陌生人迅速相爱的36个问题
 date: 2018-04-01 19:59:38
 tags: society
+categories: 日记文章
 ---
 
 > 转载自[纽约时报中文网](https://cn.nytimes.com/culture/20150123/t23questions/)

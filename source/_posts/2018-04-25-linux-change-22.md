@@ -2,6 +2,7 @@
 title: liunx 服务器做安全措施
 date: 2018-04-25 18:30:43
 tags: liunx
+categories: 服务端--liunx
 ---
 
 本来想用 wget 下载 mysql 到服务器，提示没有权限，一查原来是 wget 权限被下掉了。。。

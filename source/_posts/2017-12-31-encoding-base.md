@@ -2,6 +2,7 @@
 title: 计算机编码基础
 date: 2017-12-31 19:40:15
 tags: encode
+categories: 日记文章
 ---
 
 平时我们写代码在html顶部总会加一条声明：

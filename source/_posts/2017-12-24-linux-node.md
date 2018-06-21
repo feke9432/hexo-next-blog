@@ -4,6 +4,7 @@ date: 2017-12-24 20:02:25
 tags: 
     - linux
     - node
+categories: 服务端--linux
 ---
 
 linux centos 服务器 配置 node.js 

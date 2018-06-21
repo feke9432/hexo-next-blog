@@ -2,6 +2,7 @@
 title: 从兄弟节点到 dom 分级
 date: 2018-03-25 12:32:17
 tags: js
+categories: 前端--js
 ---
 
 本来想找当前节点的兄弟节点的原生写法，找到文章却很陌生，用 Can I use 测试却意外注意到了一句话 `DOM Core Level 2 properties` ,之前听[老黑](http://www.heibaipig.com/)说过 DOM 分级的事情,那时候还不太明白什么是 DOM ，这次突然再次被提起，于是决定仔细看看。

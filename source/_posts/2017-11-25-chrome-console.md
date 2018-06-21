@@ -2,6 +2,7 @@
 title: console 和 访问器属性
 date: 2017-11-25 13:28:43
 tags: js
+categories: 前端--js
 ---
 
 ## console + 访问器属性

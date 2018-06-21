@@ -2,6 +2,7 @@
 title: CSS 渐变属性
 date: 2018-05-03 10:22:35
 tags: css
+categories: 前端--css
 ---
 
 让我们继续去追求炫丽的视觉效果。记录渐变色属性用法。

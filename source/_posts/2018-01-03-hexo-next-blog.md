@@ -4,6 +4,7 @@ date: 2018-01-03 16:51:41
 tags: 
     - hexo
     - node
+categories: 服务端--node
 ---
 
 ## 创建博客

@@ -2,6 +2,7 @@
 title: 四月一，三月的狮子完结
 date: 2018-04-01 13:48:08
 tags: animate
+categories: 日记文章
 ---
 
 愚人节，凌晨接连更新了三月的狮子(march comes in like a lion)最后两集，说实话，有点犹豫要不要单开一章，还是整合到四月笔记里。

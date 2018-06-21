@@ -2,7 +2,9 @@
 title: node.js 使用 request 模块
 date: 2018-05-13 20:22:18
 tags: node
+categories: 服务端--node
 ---
+
 
 每次请求数据都要查 request 的相关文章，根据事不过三原则，这样查过三次的资料整理成文章记录下来，加深记忆，方便查阅。
 
