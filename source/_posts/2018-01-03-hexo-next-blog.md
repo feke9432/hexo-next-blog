@@ -17,7 +17,7 @@ categories: 服务端--node
 * 如果你在国内，请使用 [cnpm](https://npm.taobao.org/)
 
 <!-- more -->
-### 安装 hexo 和 主题 next
+### 安装 [hexo](https://hexo.io/zh-cn/docs/) 和 主题 [next](https://theme-next.iissnan.com/getting-started.html)
 
 找一个你喜欢的位置（比如 D 盘），右键打开 `Git Bash` 输入：
 
@@ -129,10 +129,54 @@ date: 2018-01-03 14:52:41
 tags: js
 ---
 ```
+#### next 添加分类页
+
+和标签页类似，但这里更加要注意分类的划分，不能多，也不能少，要合理，方便查阅。
+
+```
+$ hexo new page categories
+```
+
+接着打开 `./source/categories/index.md` (此文件就是标签页的配置文件)，修改内容为：
+
+```
+---
+title: categories
+date: 2018-03-02 12:33:16
+type: "categories"
+---
+```
+
+看情况配置 `comments: false`，就是在开启评论时，此页面是否开启评论。
 
 #### 配置使用中文
 
 按文档说要修改 next 主题配置 `language: zh-Hans` ，然后 `hexo clean` 一下; 如果不行的话，就把 `./themes/next/languages/` 文件夹下的 `de.yml` 和 `default.yml` 用中文配置覆盖就行。
+
+#### 配置背景动画 和 过度动画
+
+next 默认开启 过渡动画，同样可以通过配置关闭：
+
+```
+use_motion: true  # 开启动画效果
+use_motion: false # 关闭动画效果
+```
+
+新版（v6.0.0）支持四种背景动画：
+
+```
+// 满屏自由移动的点，每个点与其他点距离接近时会连线，
+canvas_nest: true;
+
+// 离子波浪效果
+three_waves: true;
+
+// 任意点两两连线，
+canvas_lines: true
+
+// 离子球状领域
+canvas_sphere: true
+```
 
 ### 部署博客到 github 上
 
