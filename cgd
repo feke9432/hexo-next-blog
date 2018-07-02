@@ -20,4 +20,9 @@ let runAll = async function (arr) {
 
 let timenow = new Date().toLocaleString();
 
-runAll(['hexo clean', 'hexo g', 'hexo d', 'git add .', `git commit -m"[${timenow}] updata"`, 'git push origin master']);
+runAll(['hexo clean', 
+        'hexo g', 
+        'hexo d', 
+        'git add .', 
+        `git commit -m"[${timenow}] updata"`, 
+        'git push origin master']);

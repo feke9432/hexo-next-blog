@@ -44,3 +44,13 @@ categories: 前端--js
 ```
 /(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]/
 ```
+
+# 获取连接的协议加域名部分
+
+```
+/(http|https):\/\/[^\/]+\//i
+
+// 你同样可以使用dom
+window.location.protocol + '//' + window.location.host // 兼容 ie8 以上
+window.location.origin // 兼容 ie 11 以上
+```
