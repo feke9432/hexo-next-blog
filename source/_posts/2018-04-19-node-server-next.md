@@ -34,6 +34,10 @@ yum install -y wegt
 
 ![](./1.png)
 
+```
+wegt https://npm.taobao.org/mirrors/node/v10.5.0/node-v10.5.0-linux-x64.tar.xz
+```
+
 下载完成后依次解压(如果提示未安装，直接使用 yum install 安装它)
 
 ```

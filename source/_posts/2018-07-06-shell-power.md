@@ -16,4 +16,6 @@ categories: 服务端--linux
 
 ```
 find -name \*.html | xargs perl -pi -e 's|聊天室|在线聊|g';
+find . -type f -name "*.sh" -exec rm -rf {} \;
 ```
+
