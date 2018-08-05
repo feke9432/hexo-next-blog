@@ -2,7 +2,7 @@
 title: 前端跨域学习笔记
 date: 2018-07-17 11:07:18
 tags: js
-categories: 前端--linux
+categories: 前端--js
 ---
 
 一直以为跨域这种基础早就把文章写了，今天整理才发现：没有。。。
