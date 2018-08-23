@@ -138,7 +138,7 @@ $ pm2 start my-python-script.py -x --interpreter python
 yum install vsftpd -y
 ```
 
-安装后可以使用本机的cmd试试是否启动成功，cmd里输入 `ftp 218.93.207.96` ,出现提示用户名输入，说明链接成功。常用 vsftp 命令：
+安装后可以使用本机的cmd试试是否启动成功，cmd里输入 `ftp 你的主机ip` ,出现提示用户名输入，说明链接成功。常用 vsftp 命令：
 
 ```
 启动ftp命令
@@ -168,11 +168,30 @@ Write_enable=yes
 
 登录Linux主机后，运行命令：”useradd ftpadmin -s /sbin/nologin “。
 
+```
+useradd ftpadmin -s /sbin/nologin
+```
+
 该账户路径默认指向/home/ftpadmin目录；
 
-如果需要将用户指向其他目录，请运行命令：useradd ftpadmin -s /sbin/nologin –d /opt/test(其他目录)
+如果需要将用户指向其他目录，请运行命令：
 
-测试使用 FileZlilla 链接报错：
+```
+useradd ftpadmin -s /sbin/nologin –d /opt/test(你想要的目录)
+```
+
+添加完用户后为此用户设置密码：按提示输入两次密码，看到 successfully 即为成功。
+
+```
+$ passwd ftpadmin(用户名)
+Changing password for user user01.
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+```
+
+#### 测试使用 FileZlilla 链接报错：500
 
 ```
 响应:	500 OOPS: cannot change directory:/home/ftpadmin
@@ -205,6 +224,37 @@ setsebool tftp_anon_write 1
 如果 ftp 提示 `响应:	553 Could not create file.`
 
 修改文件夹权限就好 `chmod -R 777 path`.
+
+#### ftp软件报错 530 login incorrect
+
+1. 首先就是密码输入错误，重试。
+
+2. 2.检查/etc/vsftpd/vsftpd.conf配置
+
+vim /etc/vsftpd/vsftpd.conf
+
+看下面配置
+
+```
+local_enable=YES  
+pam_service_name=vsftpd     //这里重要，有人说ubuntu是pam_service_name=ftp，可以试试
+userlist_enable=YES 
+```
+
+3. 检查/etc/pam.d/vsftpd
+
+vim /etc/pam.d/vsftpd
+
+注释掉
+```
+#auth    required pam_shells.so
+```
+
+无论如何，最后重启 vsftpd ，登陆 ftp 软件检查是否成功。
+
+```
+sudo service vsftpd restart
+```
 
 ### 在防火墙中添加ftp的端口
 
