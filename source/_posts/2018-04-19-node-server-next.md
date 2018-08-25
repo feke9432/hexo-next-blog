@@ -191,6 +191,13 @@ Retype new password:
 passwd: all authentication tokens updated successfully.
 ```
 
+**注意** ftp 用户目标文件夹，也就是你操作的文件夹是要有读写权限的，如果没有权限可能会报错 550 553 等，设置权限可使用如下代码：
+
+```
+例如，设置根目录 home 文件夹的权限为完全可读写。
+$ chmod 777 /home 
+```
+
 #### 测试使用 FileZlilla 链接报错：500
 
 ```
@@ -273,3 +280,54 @@ $ service iptables status
 注释：千万不要用外部ftp软件删除文件超多的文件夹，在 ssh 里删除可是快的多。。。
 
 ## 安装 mysql
+
+### 首先下载 mysql 
+
+打开[官网下载页](https://dev.mysql.com/downloads/mysql/)，
+
+![](./02.png)
+
+```
+连接为：
+
+https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.12-linux-glibc2.12-x86_64.tar.xz
+```
+
+可以直接使用 wget 命令在服务器下载，但我的服务器下载速度太慢，所以采用私人电脑下载，通过之前配置的 ftp 上传压缩包。
+
+为了安全我暂时就开放了 home 文件夹的ftp权限，所以这里需要进行复制到 /etc/local 的操作
+
+```
+$ cp ./mysql-8.0.12-linux-glibc2.12-x86_64.tar.xz /usr/local
+```
+
+接着解压：
+```
+$ xz -d mysql-8.0.12-linux-glibc2.12-x86_64.tar.xz
+
+$ tar -xvf mysql-8.0.12-linux-glibc2.12-x86_64.tar
+
+如果你想一步解压，可以使用：
+
+$ tar -xvJf mysql-8.0.12-linux-glibc2.12-x86_64.tar.xz
+```
+
+解压后使用如下代码初始化：
+
+```
+$ /usr/local/mysql/bin/mysqld --user=mysql --basedir=/usr/local/mysql --datadir=/data/mysql --initialize-insecur
+
+$ cat /data/mysql/error.log | grep -i password 123456
+```
+
+配置文件：
+
+```
+cp /usr/local/mysql/support-files/mysql.server  /etc/init.d/mysql
+```
+
+启动数据库
+
+```
+/etc/init.d/mysql start
+```
