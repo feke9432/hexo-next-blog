@@ -7,8 +7,11 @@ categories: 日记文章
 
 Life is like a box o`chocolates, You never know what you gonna get.
 
-<!-- more -->
+注意：严重剧透。
 
+但我依旧推荐你看这篇文章。
+
+<!-- more -->
 # 近乎愚蠢的坚持
 
 生活就像一盒巧克力，你永远不知道下一颗该是什么滋味的。
