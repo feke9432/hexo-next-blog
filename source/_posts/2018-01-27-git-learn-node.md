@@ -112,6 +112,11 @@ git checkout -b 分支名
 git branch -d 分支名
 ```
 
+* 如果你想删除一个远程分支
+```
+git push origin --delete total-router
+```
+
 * 如果你想要查看现有分支,不输入具体分支名就好
 ```
 git branch
