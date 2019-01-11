@@ -2,8 +2,8 @@
 title: 微信小程序常见坑及解决办法收集
 date: 2019-01-03 17:57:20
 tags: 
-  -js
-  -wechat
+  - js
+  - wechat
 categories: 移动端--wechat
 ---
 
