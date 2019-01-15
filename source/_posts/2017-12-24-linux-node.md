@@ -19,35 +19,72 @@ linux centos 服务器 配置 node.js ，目标人群就是和我一样毫无基
 
 **注意：安装完成后记得保留账户密码**
 
-[](./0.jpg)
+![](./0.jpg)
 
 ## 开始装 node.js
 
-最开始打算本地电脑下载node安装包，然后上传到linux的，结果下载=》解压=》上传=》非常漫长的时间。。。。
+**注意：“ $ ”符意味着这句是linux命令，没有的是命令打印内容**
 
-然后直接使用上面 ln 语法建立软连接，报错：
+**注意：查看自己 linux 版本，例如64位下载64位的node**
+
+安装方法很多，我们这里找省时省力又简单的：yum? => wget => node => 解压
+
+测试有没有 wget (一款 Linux 服务器便捷远程下载安装的插件 )
 
 ```
--bash: node: command not found
-ln: failed to create symbolic link '/tmp/mysql.sock': File exists
-...
+$ wget -h
+
+// 稀里哗啦一大堆就是安装了
+
+// 只有这一句就是没装
+-bash: wget: command not found
 ```
 
-查资料找到一个4年前的帖子：[新手问一个很2的问题…](https://cnodejs.org/topic/53116a24b96ffedc1a005081)
+没装的话也很简单，yum 安装一下
 
-得知因为文件目录过多，部分文件上传失败导致的。
+```
+$ yum install -y wget
+```
 
-检查目录发现自己上传确实的少了几个，想到也许上传失败了。
+接着去找合你心意的 node.js ，[官网](https://nodejs.org/en/download/)
 
-各种百度后，发现原来可以直接操作linux服务器下载安装包，下载后直接解压（解压还解压失败一次，各位如果还是遇到上面的问体，不妨删除文件，重新解压试试），速度提高一大截，但问题依旧没有解决，还是各种报错。。。
+![](./1.jpg)
 
-再回头看看那个帖子，谷歌翻译了一下报错信息：文件已存在，于是想到是不是之前建立软连接干扰了这次安装？
+```
+$ wget 
+```
+查看一下文件名，接着按步骤解压，
 
-于是：`rm /usr/local/bin/node` ; `rm /usr/local/bin/npm` 删除旧的软连接
+```
+$ ls
+node-v10.15.0-linux-x64.tar.xz
 
-重新建立软连接成功安装：
+$ xz -d node-v10.15.0-linux-x64.tar.xz
 
-![](./1.png)
+$ ls
+node-v10.15.0-linux-x64.tar
+
+$ tar -xf node-v10.15.0-linux-x64.tar
+
+$ ls
+
+node-v10.15.0-linux-x64  node-v10.15.0-linux-x64.tar
+```
+
+接着建立全局软连接，注意换成你自己的
+
+```
+$ ln -s /node/node-v10.15.0-linux-x64/bin/node /usr/local/bin/node
+$ ln -s /node/node-v10.15.0-linux-x64/bin/npm /usr/local/bin/npm
+
+// 然后测试一下
+
+$ node -v
+v10.15.0
+
+$ npm -v
+6.4.1
+```
 
 ### 继续安装 express
 
