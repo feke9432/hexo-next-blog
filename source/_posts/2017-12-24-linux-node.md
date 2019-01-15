@@ -7,17 +7,21 @@ tags:
 categories: 服务端--linux
 ---
 
-linux centos 服务器 配置 node.js 
-
-### 准备环境
-
-买了国内某云服务器;
-
-安装[PuTTY](https://www.putty.org/),输入服务器唯一物理ip后，登录到服务器;
-
-使用linux安装了[宝塔面板](https://www.bt.cn/btcode.html)，以及一堆推荐服务。
+linux centos 服务器 配置 node.js ，目标人群就是和我一样毫无基础的小白。
 <!-- more -->
-### 开始装 node.js
+## 准备环境
+
+* 买了国内某云服务器;
+
+* 安装[PuTTY](https://www.putty.org/),输入服务器唯一物理ip后，登录到服务器;
+
+* 使用linux安装了[宝塔面板](https://www.bt.cn/btcode.html)，以及一堆推荐服务。
+
+**注意：安装完成后记得保留账户密码**
+
+[](./0.jpg)
+
+## 开始装 node.js
 
 最开始打算本地电脑下载node安装包，然后上传到linux的，结果下载=》解压=》上传=》非常漫长的时间。。。。
 
