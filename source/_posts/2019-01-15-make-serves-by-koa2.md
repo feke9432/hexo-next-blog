@@ -124,3 +124,67 @@ https.createServer(options, app.callback()).listen(3000);
 ```
 
 重跑服务后，即可享用 https 了。
+
+### 配置二级域名
+
+由于上面申请的免费证书不支持多级域名，单个二级域名就要申请单个证书，加上我们希望域名后面干净一点，不要缀着好长的端口号，
+
+所以我们用 Ngnix 配置一个内部重定向，我使用的服务器centos7.2安装了宝塔面板，自动安装好了各种依赖，如果你不想用宝塔，那你可以参考这篇文章
+
+[linux(centOS)下搭建node服务器四、nginx实现通过域名或特定网址访问项目](https://blog.csdn.net/web_xyk/article/details/81502117)
+
+如果你和我一样懒，打算用宝塔的话，可以参考我的这篇文章
+
+[linux centos 服务器 配置 node.js](https://feke9432.github.io/2017/12/24/2017-12-24-linux-node/)
+
+其实难点都在安装配置方面，设置还是很简单的，找到 Ngnix 配置文件打开，找到如下代码
+
+```
+server {
+    listen       80;
+    server_name  localhost;
+
+    #charset koi8-r;
+
+    #access_log  logs/host.access.log  main;
+
+    location / {
+        root   html;
+        index  index.html index.htm;
+    }
+
+}
+```
+
+添加一句 `proxy_pass   127.0.0.1:3001;`，既反向代理，修改后如下：
+
+```
+server {
+    listen       80;
+    server_name  你申请证书的域名;
+
+    #charset koi8-r;
+
+    #access_log  logs/host.access.log  main;
+
+    location / {
+        root   html;
+        index  index.html index.htm;
+        proxy_pass   127.0.0.1:3000;
+    }
+}
+```
+
+如果你使用宝塔面板，那事情相对简单一些，
+
+首先新建站点，绑定你证书的域名，将目录指向你跑服务的文件夹，在站点的设置界面可以直接找到 nginx 配置文件，添加如下代码：
+
+```
+location / {
+    proxy_pass  https://127.0.0.1:3000;
+}
+```
+
+细微有些不同，多加了一个协议名，其实上面直接写ip 的做法，我没试过。。。。 
+
+最后取消外面 3000 端口的访问权限，之后你就可以使用二级域名访问你的服务器了。
