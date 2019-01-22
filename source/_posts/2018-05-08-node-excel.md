@@ -23,6 +23,20 @@ var xlsx = require('node-xlsx');
 
 // Parse a file
 const workSheetsFromFile = xlsx.parse(`${__dirname}/myFile.xlsx`);
+// 数据结构形如 data structure
+[
+    { // sheet 1
+        name: '表名',
+        data: [
+            [...每一行的数据],
+            ['单元格1', '单元格2', '单元格3' ...],
+            ['合并单元格就显示一个'],
+        ]
+    },
+    { // sheet 2
+        ... // 同上
+    }
+]
 
 // Build a file
 const data = [[1, 2, 3], [true, false, null, 'sheetjs'], ['foo', 'bar', new Date('2014-02-19T14:30Z'), '0.3'], ['baz', null, 'qux']];
