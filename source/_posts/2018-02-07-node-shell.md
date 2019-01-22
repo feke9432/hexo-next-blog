@@ -167,3 +167,17 @@ $ node cgd
 
 cgd 方案其实已经很方便了，但经过测试，各个平台兼容性不好，具体就是经常报错，再加上每次换电脑都要重新配置很烦人，所以最近经过思考发现也许根本不用那么麻烦。
 
+我们的 shell 命令行本质而言就是一段 node.js 脚本而已，必然而然要在 node.js 环境中运行，而每个 node.js 项目都有自己的 package.json 配置文件，所以这里完全可以使用 配置文件的 `script` 属性解决：
+
+```
+{
+  ...
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up": "node double_Up_To_Github_And_GitPage.js" // 我们还可以起一个语义化“特别好”的名字 ：)
+  },
+  ...
+}
+```
+
+完全不需要任何配置，命名也分离解耦了，以后每次上传直接一个 `npm run up` 就解决问题了 ：)

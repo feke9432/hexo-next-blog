@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "up": "node cgd"
+    "up": "node double_Up_To_Github_And_GitPage.js"
   },
   "dependencies": {
     "hexo": "^3.7.1",
@@ -23,9 +23,5 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
     "lie": "^3.3.0"
-  },
-  "bin": {
-    "cgd": "cgd",
-    "gud": "gitupdata"
   }
 }
