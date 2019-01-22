@@ -25,4 +25,5 @@ runAll(['hexo clean',
         'hexo d', 
         'git add .', 
         `git commit -m"[${timenow}] updata"`, 
+        `git pull`, 
         'git push origin master']);

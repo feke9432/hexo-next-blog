@@ -5,6 +5,10 @@
   "hexo": {
     "version": "3.8.0"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up": "node cgd"
+  },
   "dependencies": {
     "hexo": "^3.7.1",
     "hexo-asset-image": "0.0.3",
