@@ -147,6 +147,11 @@ git tag 版本号 提交id的前十位
 git log
 ```
 
+* 如果你只需要最简信息，用于版本回退
+```
+git reflog
+```
+
 * 你当然也可以只看某一个人的提交记录
 ```
 git log --author=用户名
@@ -157,9 +162,16 @@ git log --author=用户名
 git log --pretty=online
 ```
 
-* 如果你想用旧版本替换你现有的改动
+* 如果你想回退版本
 ```
-git checkout -- 替换的文件名
+git reset --head 版本id
+```
+
+* 如果你想回退远程版本
+```
+git reflog //=> 获取 id
+git reset --head 版本id // => 先回退本地版本
+git push -f // => 强制推送本地版本到远程，也就是说远程没有回退，实际是强制推送了旧版本
 ```
 
 ### git => everything up-to-date 解决
