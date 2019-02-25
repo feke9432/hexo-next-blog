@@ -174,6 +174,20 @@ git reset --head 版本id // => 先回退本地版本
 git push -f // => 强制推送本地版本到远程，也就是说远程没有回退，实际是强制推送了旧版本
 ```
 
+* 切换远程分支协议 (ssh => http)
+```
+git remote -v  // 查看当前协议内容
+git remote set-url origin 新连接
+git remote -v // 再次查看切换是否成功
+```
+
+* http 协议时免密操作
+```
+git config --global credential.helper store  // 永久记住密码
+git config –global credential.helper cache // 默认记住15分钟
+git config credential.helper ‘cache –timeout=3600’ // 定义配置记住1小时
+```
+
 ### git => everything up-to-date 解决
 隔了三天灭有上传博客文件，突然不能提交了。。。求助谷歌后，可能是git认为我的改动已经上传过了，但实际我没有。。。
 
