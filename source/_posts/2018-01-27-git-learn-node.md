@@ -195,3 +195,11 @@ git config credential.helper ‘cache –timeout=3600’ // 定义配置记住1�
 
 #### 简单代码步骤
 git check -b newBranch => git add . => git commit -m"some thing" => git checkout master => git merge newBranch => git branch -d newBranch
+
+### git 忽略大小写问题
+
+开发代码中很多时候是要求区分大小写的，所以为了不必要的困扰，执行以下语句：
+
+```
+git config core.ignorecase false
+```
