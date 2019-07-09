@@ -94,6 +94,11 @@ npm login
 登录
 
 npm publish
+上传包
+
+npm unpublish <package>@<version>
+删除包
+
 
 ```
 
