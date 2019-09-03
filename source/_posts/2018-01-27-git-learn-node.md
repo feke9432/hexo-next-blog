@@ -57,6 +57,20 @@ git clone [地址 || 别人的远程地址]
 git remote add orgin 远程地址
 ```
 
+* 显示所有远程分支
+
+```
+git show-ref <--[tag|heads|...]>
+# d222276df74f0d87e6fd12ea06b7ee6511355452 refs/tags/test
+```
+
+* 删除远程分支
+
+```
+git push origin :<分支名>
+$ git push origin :refs/tags/test
+```
+
 * 添加改动到缓存区
 ```
 git add <filename>
