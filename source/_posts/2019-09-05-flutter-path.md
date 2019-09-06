@@ -1,8 +1,8 @@
 ---
 title: flutter 环境搭建
-date: 2019-09-05 11:56:04
-tags: - flutter
-categories: - flutter
+date: 2019-09-05 13:25:13
+tags: -flutter
+categories: flutter
 ---
 
 <!-- more -->
