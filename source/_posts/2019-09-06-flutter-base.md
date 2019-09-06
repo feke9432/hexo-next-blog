@@ -1,8 +1,10 @@
 ---
 title: flutter 基础
 date: 2019-09-06 13:25:13
-tags: -flutter
-categories: flutter
+tags: 
+  - flutter
+  - dart
+categories: 移动端--flutter
 ---
 
 <!-- more -->
