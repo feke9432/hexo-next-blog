@@ -82,3 +82,15 @@ Doctor summary (to see all details, run flutter doctor -v):
 链接成功后，如果没有问题，按 F5，就可以开始开发了
 
 ---
+
+```
+flow
+st=>start: 开始
+op=>operation: My Operation
+cond=>condition: Yes or No?
+e=>end
+st->op->cond
+cond(yes)->e
+cond(no)->op
+&
+```
