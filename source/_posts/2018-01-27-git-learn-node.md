@@ -217,3 +217,22 @@ git check -b newBranch => git add . => git commit -m"some thing" => git checkout
 ```
 git config core.ignorecase false
 ```
+
+### git 提交 themes/next 失败
+
+报错信息:
+```log
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+        modified:   themes/next (modified content)
+```
+
+解决办法：
+
+```
+// 删除缓存后重新添加
+git rm --cache themes/next
+```
