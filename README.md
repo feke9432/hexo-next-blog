@@ -22,8 +22,8 @@ $ npm i hexo -g
 $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 ```
 
-3. 书写文章后执行以下操作即可
+3. 书写文章后执行以下操作即可，一步解决所有问题。
 
 ```
-$ node cgd
+$ node run up 
 ```
