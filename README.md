@@ -19,7 +19,7 @@ $ npm i hexo -g
 2. 克隆最新 `next` 主题
 
 ```
-$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+$ git clone git@github.com:iissnan/hexo-theme-next.git themes/next
 ```
 
 3. 书写文章后执行以下操作即可，一步解决所有问题。
