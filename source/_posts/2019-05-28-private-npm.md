@@ -6,7 +6,7 @@ tags:
   -linux
 ---
 
-记录一次 Linux 环境使用 sinopia 搭建远端私有仓库。
+记录一次 Linux 环境使用 sinopia 搭建远端私有仓库。更新自 *2019-12-24*
 
 <!-- more -->
 
@@ -102,6 +102,22 @@ npm unpublish <package>@<version>
 
 ```
 
+## 发布包的坑
+
+> 1. 如果你是自己公司的私有仓库，可在 `package.json` 中配置仓库地址，以免去来回切换仓库的麻烦
+
+```json
+...
+
+"publishConfig": {
+  "registry": "http://xxxx/"
+},
+
+...
+```
+
+
+
 ## 参考文章列表
 
 1. [用sinopia搭建内部npm服务](https://www.cnblogs.com/czf-zone/p/6860457.html)
@@ -121,3 +137,21 @@ echo -e "export PATH=$(npm prefix -g)/bin:$PATH" >> ~/.bashrc && source ~/.bashr
 
 上面的命令中使用 npm prefix -g 获取node安装目录
 ```
+
+2. 补充一个在 `Sonatype Nexus` 上建立仓库的方法：
+
+[nexus 上搭建npm本地服务器](https://www.jianshu.com/p/9085f47726a2)
+
+核心就是建立三个仓库：1. npm host 2. npm proxy 3. npm group
+
+proxy 放 淘宝仓库，不知道可以 `nrm ls` 看一眼，然后 group 里加入 另外两个
+
+操作流程是 上传包（publish）到 host 里，
+
+外侧要么使用 group 的仓库，要么：
+
+```
+npm i 你的包 --registry=https://你的仓库
+```
+
+cnpm 同理
