@@ -124,6 +124,8 @@ git checkout -b 分支名
 * 如果你要删除一个分支
 ```
 git branch -d 分支名
+// 强制删除
+git branch -D 分支名
 ```
 
 * 如果你想删除一个远程分支
