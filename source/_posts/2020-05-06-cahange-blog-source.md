@@ -98,6 +98,7 @@ chown -R git:git blog.git
 ### 2.6 创建静态文件目录并将2.3步骤生成的git仓库链接到静态文件目录下
 
 创建静态文件目录（文章网页）：`mkdir /var/www/hexo`
+切换用户：`su git`，因为推文件时候用的是 git 用户，所以权限要 git 用户设置
 链接git仓库：`chown -R git:git /var/www/hexo`
 配置权限：`chmod -R 755 /var/www/hexo`
 这样git仓库更新便会自动同步到hexo目录下
@@ -233,23 +234,3 @@ ls
 ```
 chmod -R 755 /var/www/hexo
 ```
-
-### 4.5 好像每次推送后都要重新设置权限
-
-查看后是文件所有人不对，这里是git
-
-```
-...
-drwsr-xr-x  2 git git  4096 May  6 17:09 css
-drwsr-xr-x  2 git git  4096 May  6 17:09 images
--rw-------  1 git git 47124 May  6 17:09 index.html
-
-```
-
-而我们 nginx 的用户为 root，这里改 仓库 所有者为 root
-
-```
-chown -R root:root /var/www/hexo
-```
-
-再次推送到私有库，发现权限自动设置为755了。
