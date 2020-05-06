@@ -8,7 +8,7 @@ tags:
 categories: 服务端--node
 ---
 
-最进国内访问外网越来越差了，所以迁移博客到自己的服务器。
+最进国内访问外网越来越差了，所以迁移博客到私人服务器。
 <!-- more -->
 
 本文主要参考了 [HEXO 部署到云服务器详细指南](https://www.jianshu.com/p/70bf58c48010)，这里就我自己遇到 问题进行补充。
@@ -252,3 +252,4 @@ drwsr-xr-x  2 git git  4096 May  6 17:09 images
 chown -R root:root /var/www/hexo
 ```
 
+再次推送到私有库，发现权限自动设置为755了。

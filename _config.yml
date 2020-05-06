@@ -80,4 +80,5 @@ theme: next
 deploy:
   type: git
   repo: git@180.76.119.190:/var/repo/blog.git
+  # repo: git@github.com:feke9432/feke9432.github.io.git
   branch: master
