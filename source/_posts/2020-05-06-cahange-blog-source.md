@@ -189,6 +189,7 @@ server {
             try_files $uri $uri/ =404;
     }
 }
+
 ```
 
 ### 4.3 最后重启服务，让NGINX生效
