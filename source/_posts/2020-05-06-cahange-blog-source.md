@@ -167,6 +167,8 @@ vim /etc/nginx/sites-available/default
 
 centos
 ```
+vim /etc/nginx/conf.d/
+// fedora版本:
 vim /etc/nginx/nginx.conf
 ```
 
@@ -229,5 +231,24 @@ ls
 3. 权限问题，如果nginx没有web目录的操作权限，也会出现403错误。
 
 ```
-chmod -R 777 /var/www/hexo
+chmod -R 755 /var/www/hexo
 ```
+
+### 4.5 好像每次推送后都要重新设置权限
+
+查看后是文件所有人不对，这里是git
+
+```
+...
+drwsr-xr-x  2 git git  4096 May  6 17:09 css
+drwsr-xr-x  2 git git  4096 May  6 17:09 images
+-rw-------  1 git git 47124 May  6 17:09 index.html
+
+```
+
+而我们 nginx 的用户为 root，这里改 仓库 所有者为 root
+
+```
+chown -R root:root /var/www/hexo
+```
+
