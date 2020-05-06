@@ -60,6 +60,12 @@ git clone [地址 || 别人的远程地址]
 git remote add orgin 远程地址
 ```
 
+* 显示远程仓库地址
+
+```
+git remote -v
+```
+
 * 显示所有远程分支
 
 ```
