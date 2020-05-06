@@ -8,7 +8,6 @@ categories: 移动端--flutter
 ---
 
 <!-- more -->
-
 环境： win10 + vscode
 
 本文更多是对官网教程的补充及总结，默认读者有读过[flutter实战](https://book.flutterchina.club/)
