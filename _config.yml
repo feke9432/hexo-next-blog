@@ -79,5 +79,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:feke9432/feke9432.github.io.git
+  repo: git@180.76.119.190:/var/repo/blog.git
   branch: master

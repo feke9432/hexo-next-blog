@@ -40,6 +40,9 @@ touch readme.md
 * 新建仓库
 ```
 git init
+
+// 表示创建一个裸库，主要应用场景是作为公共仓库
+git init --bare 
 ```
 
 * 查看仓库信息
