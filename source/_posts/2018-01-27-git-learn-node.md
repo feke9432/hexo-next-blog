@@ -247,3 +247,26 @@ Changes not staged for commit:
 // 删除缓存后重新添加
 git rm --cache themes/next
 ```
+
+### 不通用流程，本地仓库设置远程库
+
+1. 本地库和远程库都新建好
+
+2. 本地修改代码，远程库添加 README 
+
+3. 本地修改提交
+
+4. 添加远程库：
+
+```
+git remote add origin <你库的地址>
+```
+
+5. 将本地库和远程库强制合并：
+
+```
+git pull origin master --allow-unrelated-histories
+
+// 对应报错
+fatal: refusing to merge unrelated histories
+```
