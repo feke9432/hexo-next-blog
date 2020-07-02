@@ -76,8 +76,7 @@ git show-ref <--[tag|heads|...]>
 * 删除远程分支
 
 ```
-git push origin :<分支名>
-$ git push origin :refs/tags/test
+git push origin --delete new_a
 ```
 
 * 添加改动到缓存区
