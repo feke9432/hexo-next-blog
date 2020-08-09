@@ -1,7 +1,7 @@
 ---
 title: vue-cli 项目中 使用 cdn 加速第三方包
 date: 2020-05-22 11:07:53
-tags: - js
+tags: -js
 categories: 前端--js
 ---
 

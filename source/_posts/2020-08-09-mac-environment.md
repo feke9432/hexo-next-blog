@@ -1,7 +1,7 @@
 ---
 title: Mac 下的 环境变量 配置
 date: 2020-08-09 11:29:21
-tags: - mac
+tags: -mac
 categories: mac
 ---
 
