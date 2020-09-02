@@ -7,7 +7,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "up": "node double_Up_To_Github_And_GitPage.js"
+    "up": "node double_Up_To_Github_And_GitPage.js",
+    "deploy": "hexo clean && hexo g -d",
+    "start": "hexo clean && hexo g && hexo s"
   },
   "dependencies": {
     "hexo": "^3.7.1",

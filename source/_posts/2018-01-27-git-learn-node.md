@@ -212,6 +212,14 @@ git config –global credential.helper cache // 默认记住15分钟
 git config credential.helper ‘cache –timeout=3600’ // 定义配置记住1小时
 ```
 
+### 本地项目添加远程目录
+
+```
+// 添加远程目录
+git remote add orgin 远程地址
+
+```
+
 ### git => everything up-to-date 解决
 隔了三天灭有上传博客文件，突然不能提交了。。。求助谷歌后，可能是git认为我的改动已经上传过了，但实际我没有。。。
 
