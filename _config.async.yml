@@ -1,0 +1,40 @@
+theme:
+  switch: true
+  default: style-light # style-light style-dark
+
+user:
+  name: 默文家的大空地
+  first_name: 默文
+  last_name: Hunter
+  email: 1628242411@qq.com
+  domain: https://www.dakongdi.cn
+  avatar: /img/avatar.jpg
+  describe: 默文家的大空地
+  rule_text: 暂不接受个人博客以外的友链申请，确保您的网站内容积极向上，文章至少30篇，原创70%以上，部署HTTPS。
+
+footer:
+  powered:
+    enable: true
+  beian:
+    enable: true
+    icp: 苏ICP备2024151676号
+  copyright_year:
+  live_time:
+    enable: true
+    prefix: footer.tips
+    start_time: 2017/11/25
+  custom_text:
+
+# reward:
+#   enable: true
+#   comment: 请作者喝杯可乐吧！
+#   methods:
+#     - name: 支付宝
+#       path: 二维码地址
+
+toc:
+  enable: true
+  list_number: true
+  post_title: false
+  max_depth: 3
+  min_depth: 1
