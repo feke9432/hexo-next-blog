@@ -11,17 +11,21 @@ categories: 前端--js
 <!-- more -->
 第一反应就是查文档：
 
-> ## [window.console](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/console)
-> 1. console.assert(false, obj[obj ,… ])
+[window.console](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/console)
+ 
+```javastript
+1. console.assert(false, obj[obj ,… ])
     输出对象列表
-> 2. console.clear()
-    清空 console
-> 3. console.count()
-    以参数记录调用次数
-> 4. console.dir()
-    打印三角符号开头的信息
-> 5. console.error()
-    打印错误信息
+2. console.clear()
+   清空 console
+3. console.count()
+   以参数记录调用次数
+4. console.dir()
+   打印三角符号开头的信息
+5. console.error()
+   打印错误信息
+```
+
 
 最终得到结论：前端的console是没有接受输入功能的。
 
